@@ -31,6 +31,7 @@ Route::get('/kegiatan',[GuestController::class,'kegiatanPage'])->name('kegiatanp
 Route::get('/kesehatan',[GuestController::class,'kesehatanPage'])->name('kesehatanpage');
 Route::get('/cuaca',[GuestController::class,'cuacaPage'])->name('cuacapage');
 Route::get('/komunitas',[GuestController::class,'komunitasPage'])->name('komunitaspage');
+Route::get('/sosial',[GuestController::class,'sosialPage'])->name('sosialpage');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

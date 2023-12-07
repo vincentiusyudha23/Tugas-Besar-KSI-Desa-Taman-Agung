@@ -31,4 +31,8 @@ class GuestController extends Controller
 
         return Inertia::render('KomunitasPage');
     }
+    public function sosialPage(){
+
+        return Inertia::render('SosialPage');
+    }
 }

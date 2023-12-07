@@ -10,6 +10,7 @@ export default function Guest({ children }) {
         backgroundSize: 'cover',
         backgroundPositionY: '-250px',
     }
+    const noNavbar = route().current('login')
     return (
         <div className="w-full h-screen">
             <nav className='w-full h-[16vh] fixed top-0' style={myBgNavbar}>
@@ -24,13 +25,13 @@ export default function Guest({ children }) {
                         </div>
                     </div>
                     <div className='flex-col w-[80%] h-full '>
-                        <div className='flex justify-end items-end w-full h-full gap-5'>
+                        <div className={`flex justify-end items-end w-full h-full gap-5 ${noNavbar && 'hidden'}`}>
                             <NavLink href={route('homepage')} active={route().current('homepage')}>Profile</NavLink>
                             <NavLink href={route('kegiatanpage')} active={route().current('kegiatanpage')}>Kegiatan</NavLink>
                             <NavLink href={route('kesehatanpage')} active={route().current('kesehatanpage')}>Kesehatan</NavLink>
                             <NavLink href={route('cuacapage')} active={route().current('cuacapage')}>Cuaca</NavLink>
                             <NavLink href={route('komunitaspage')} active={route().current('komunitaspage')}>komunitas</NavLink>
-                            <NavLink >Sosial</NavLink>
+                            <NavLink href={route('sosialpage')} active={route().current('sosialpage')}>Sosial</NavLink>
                         </div>
                     </div>
                 </div>
