@@ -8,33 +8,39 @@ export default function Guest({ children }) {
     const myBgNavbar = {
         backgroundImage: `url("${BgImage}")`,
         backgroundSize: 'cover',
-        backgroundPositionY: '-300px',
-        backgroundAttachment: 'fixed',
+        backgroundPositionY: '-250px',
     }
     return (
-        <div className="w-full h-screen" style={myBgNavbar}>
-            <nav className='w-full h-[16vh] bg-white/60'>
-                <div className='w-full h-full flex px-5 items-center'>
-                    <img src={Lambang} className='w-20'/>
-                    <div className='flex-col w-full h-full '>
-                        <h1 className='text-center font-bold text-lg'>Desa Taman Agung, Kalianda, Lampung Selatan</h1>
-                        <div className='flex justify-center items-center w-full h-[65%] gap-5'>
-                            <NavLink >Profile</NavLink>
-                            <NavLink >Kegiatan</NavLink>
-                            <NavLink >Kesehatan</NavLink>
-                            <NavLink >Cuaca</NavLink>
-                            <NavLink >komunitas</NavLink>
+        <div className="w-full h-screen">
+            <nav className='w-full h-[16vh] fixed top-0' style={myBgNavbar}>
+                <div className='w-full h-full flex px-5 items-center bg-white/60'>
+                    <div className='w-[35%] flex justify-center'>
+                        <img src={Lambang} className='w-20' />
+                        <div className='text-lg font-bold flex flex-col items-center justify-center pl-3'>
+                            <h1 className='text-2xl'>Desa Taman Agung</h1>
+                            <h1 className='pl-3'>
+                                kalianda, Lampung Selatan
+                            </h1>
+                        </div>
+                    </div>
+                    <div className='flex-col w-[80%] h-full '>
+                        <div className='flex justify-end items-end w-full h-full gap-5'>
+                            <NavLink href={route('homepage')} active={route().current('homepage')}>Profile</NavLink>
+                            <NavLink href={route('kegiatanpage')} active={route().current('kegiatanpage')}>Kegiatan</NavLink>
+                            <NavLink href={route('kesehatanpage')} active={route().current('kesehatanpage')}>Kesehatan</NavLink>
+                            <NavLink href={route('cuacapage')} active={route().current('cuacapage')}>Cuaca</NavLink>
+                            <NavLink href={route('komunitaspage')} active={route().current('komunitaspage')}>komunitas</NavLink>
                             <NavLink >Sosial</NavLink>
                         </div>
                     </div>
                 </div>
-                <div>
-
-                </div>
+                <div className='w-full h-4 bg-black'></div>
             </nav>
-            <div className='w-full h-4 bg-black'></div>
-            <div className='w-full bg-white h-[84vh] px-10 py-5'>
+            <div className='w-full bg-white px-5 pt-40 pb-16'>
                 {children}
+            </div>
+            <div className='w-full bg-gray-300 fixed bottom-0 text-center py-2'>
+                @Desa Taman Agung 2023
             </div>
         </div>
     );
