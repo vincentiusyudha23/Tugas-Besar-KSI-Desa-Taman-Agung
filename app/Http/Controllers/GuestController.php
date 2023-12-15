@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\news;
 use Inertia\Inertia;
-use App\Models\Kegiatan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class GuestController extends Controller
 {
@@ -12,27 +13,33 @@ class GuestController extends Controller
         return Inertia::render('Welcome');
     }
     public function kegiatanPage(){
-
-        $data = Kegiatan::orderBy('created_at','desc')->get();
-
+        $news = news::where('category','kegiatan')->orderBy('created_at','desc')->get();
         return Inertia::render('KegiatanPage',[
-            'kegiatan'=>$data
+            'kegiatan'=> $news
         ]);
     }
     public function kesehatanPage(){
-        
-        return Inertia::render('KesehatanPage');
+         $news = news::where('category','kesehatan')->orderBy('created_at','desc')->get();
+        return Inertia::render('KesehatanPage',[
+            'kesehatan'=>$news
+        ]);
     }
     public function cuacaPage(){
-
-        return Inertia::render('CuacaPage');
+         $news = news::where('category','cuaca')->orderBy('created_at','desc')->get();
+        return Inertia::render('CuacaPage',[
+            'cuaca'=>$news
+        ]);
     }
     public function komunitasPage(){
-
-        return Inertia::render('KomunitasPage');
+         $news = news::where('category','komunitas')->orderBy('created_at','desc')->get();
+        return Inertia::render('KomunitasPage',[
+            'komunitas'=>$news
+        ]);
     }
     public function sosialPage(){
-
-        return Inertia::render('SosialPage');
+         $news = news::where('category','sosial')->orderBy('created_at','desc')->get();
+        return Inertia::render('SosialPage',[
+            'sosial'=>$news
+        ]);
     }
 }

@@ -10,7 +10,7 @@ export default function Guest({ children }) {
         backgroundSize: 'cover',
         backgroundPositionY: '-250px',
     }
-    const noNavbar = route().current('login')
+    const noNavbar = route().current('login') || route().current('register')
     return (
         <div className="w-full h-screen">
             <nav className='w-full h-[16vh] fixed top-0' style={myBgNavbar}>

@@ -16,7 +16,7 @@ const api = {
     lang: "id"
 }
 
-const CuacaPage = () => {
+const CuacaPage = ({ cuaca }) => {
     const [weather, setWeather] = useState(null);
     const [current, setCurrent] = useState(null);
     const [currentDate, setCurrentDate] = useState(new Date())
@@ -143,9 +143,17 @@ const CuacaPage = () => {
                     </div>
                 </div>
                 <div className='w-[40%] px-2'>
-                    <CardWeather />
-                    <CardWeather />
-                    <CardWeather />
+                    {cuaca.length ? (
+                        <>
+                            {cuaca.map((item, idx) => (
+                                <CardWeather key={idx} judul={item.judul} deskripsi={item.deskripsi} tanggal={item.created_at} gambar={item.gambar} />
+                            ))}
+                        </>
+                    ) : (
+                        <div className='w-full h-[50vh] flex justify-center items-center'>
+                            <h1>Belum ada Berita</h1>
+                        </div>
+                    )}
                 </div>
             </div>
         </Guest>
