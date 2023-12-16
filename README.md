@@ -26,3 +26,20 @@ Berikut URL Drive untuk PPT dan Foto/Video Kegiatan:
 
 - PPT Canva : 
     <https://www.canva.com/design/DAFzo9U0dBE/H-iwAMpLlTm-S-iO7AxylQ/edit?utm_content=DAFzo9U0dBE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton>
+
+Cara Clone dan Menjalankan Web Desa Taman Agung di local
+1. Lakukan di commend promt (CMD) atau git bash
+
+- git clone <https://github.com/vincentiusyudha23/Tugas-Besar-KSI-Desa-Taman-Agung.git>
+- composer update
+- npm install
+- cp .env.example .env
+- php artisan key:generate
+
+2. setelah menyelesaikan step poin 1, buat database di mySql sesuai dengan DB_DATABASE di file .env
+3. untuk Run devMode web di local, lakukan di cmd/git bash
+ - php artisan serve
+ - npm run dev
+5. untuk run buildMode, lakukan di cmd/git bash
+ - npm run build
+ - php artisan serve
