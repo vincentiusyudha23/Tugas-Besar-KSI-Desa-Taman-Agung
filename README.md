@@ -18,14 +18,19 @@ Berikut URL Drive untuk PPT dan Foto/Video Kegiatan:
 - Link Laporan Akhir :
     <https://docs.google.com/document/d/1a0cayCXz-n9qQAB3lbaZ8GEo5J244ONEeH7ypj6GTgU/edit?usp=sharing>
 
+- Link Laporan PPT
+    <https://www.canva.com/design/DAF2REugED8/o4bv92fIHCGeLYImREXLtg/edit?utm_content=DAF2REugED8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton>
+
+- Link Petunjuk Penggunaan / Manual Book
+    <https://drive.google.com/file/d/13AncMojG-IplBneW4Uc2ST-7i9mV1yfU/view?usp=sharing>
+
+- Link Poster
+    <https://drive.google.com/file/d/1FZUMOdN4YoPa9MoKozAgvz2QAX6eTv9k/view?usp=sharing>
+
 - Design Figma : 
     <https://www.figma.com/file/8ZU7kB72NqnLXb1E6JvQ96/Untitled?type=design&node-id=0%3A1&mode=design&t=87AG91faIRUYcYE6-1>
 
-- Design Figma : 
-    https://www.figma.com/file/8ZU7kB72NqnLXb1E6JvQ96/Untitled?type=design&node-id=0%3A1&mode=design&t=87AG91faIRUYcYE6-1
 
-- PPT Canva : 
-    <https://www.canva.com/design/DAFzo9U0dBE/H-iwAMpLlTm-S-iO7AxylQ/edit?utm_content=DAFzo9U0dBE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton>
 
 Cara Clone dan Menjalankan Web Desa Taman Agung di local
 1. Lakukan di commend promt (CMD) atau git bash
